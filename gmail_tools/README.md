@@ -52,8 +52,9 @@ python3 gmail_cleanup.py
 
 ## 📁 Pliki
 
-- `gmail_cleanup.py` - Główny skrypt porządkowania (6.9 KB)
-- `gmail_auth.py` - OAuth autoryzacja (2.4 KB)
+- `gmail_cleanup.py` - Główny skrypt porządkowania INBOX (8.3 KB)
+- `gmail_reclassify_inne.py` - Przeklasyfikowanie folderu "Inne" (7.8 KB)
+- `gmail_auth.py` - OAuth autoryzacja (2.3 KB)
 - `gmail_enable_api.md` - Instrukcje konfiguracji
 - `.gitignore` - Zabezpieczenie credentials
 
@@ -77,16 +78,31 @@ Pliki te są chronione przez `.gitignore`.
 
 1. **Pierwsze uruchomienie:**
    ```bash
+   # Autoryzacja (jednorazowo)
    python3 gmail_auth.py
+
+   # Cleanup INBOX
    python3 gmail_cleanup.py
+
+   # Przeklasyfikuj folder "Inne" (opcjonalne)
+   python3 gmail_reclassify_inne.py
    ```
 
 2. **Kolejne uruchomienia:**
    ```bash
+   # Uporządkuj nowe wiadomości w INBOX
    python3 gmail_cleanup.py
+
+   # Przeklasyfikuj "Inne" gdy zbierze się dużo wiadomości
+   python3 gmail_reclassify_inne.py
    ```
 
 3. **Jeśli masz więcej niż 500 wiadomości** - uruchom ponownie aż INBOX będzie pusty
+
+4. **Przeklasyfikowanie "Inne":**
+   - Skrypt `gmail_reclassify_inne.py` przenosi wiadomości z folderu "Inne" do bardziej szczegółowych kategorii
+   - Użyj go gdy folder "Inne" urośnie
+   - Działa na: Gemini/Meet Notes, Edukacja/Webinary, Tech Services/Hosting, Rozrywka/Media
 
 ## 📝 Notatki
 
