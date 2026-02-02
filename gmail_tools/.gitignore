@@ -1,0 +1,21 @@
+# Gmail Credentials - NIGDY NIE COMMITUJ!
+token.pickle
+client_secret.json
+credentials.json
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
